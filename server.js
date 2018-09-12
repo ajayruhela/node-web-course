@@ -66,12 +66,17 @@ app.get('/',(request,response)=>{
 app.get('/about',(request,response)=>{
    // response.send('<h2>about Page</h2>');
    response.render('about.hbs',{
-       pageTitle: 'About Page',
+       pageTitle: 'About Page'
        //currentYear: new Date().getFullYear()
 
    });
 });
-
+app.get('/projects',(request,response)=>{
+    
+    response.render('projects.hbs',{
+        pageTitle: 'Projects'
+    });
+ });
 app.get('/bad',(request,response)=>{
     response.send({error: 'Bad Request'});
     
